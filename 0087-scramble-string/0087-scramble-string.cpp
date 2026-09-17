@@ -1,0 +1,3 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Solution { public: bool isScramble(string a,string b){unordered_map<string,bool>m;function<bool(string,string)>f=[&](string x,string y){string k=x+"#"+y;if(m.count(k))return m[k];if(x==y)return true;if(x.size()!=y.size())return false;array<int,26>c{};for(int i=0;i<x.size();i++)c[x[i]-'a']++,c[y[i]-'a']--;for(int z:c)if(z)return m[k]=false;for(int i=1;i<x.size();i++)if((f(x.substr(0,i),y.substr(0,i))&&f(x.substr(i),y.substr(i)))||(f(x.substr(0,i),y.substr(y.size()-i))&&f(x.substr(i),y.substr(0,y.size()-i))))return m[k]=true;return m[k]=false;};return f(a,b);} };
