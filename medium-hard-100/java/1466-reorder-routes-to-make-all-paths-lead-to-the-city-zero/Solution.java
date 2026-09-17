@@ -1,0 +1,2 @@
+import java.util.*;
+class Solution { public int minReorder(int n,int[][]c){List<int[]>[]g=new List[n];for(int i=0;i<n;i++)g[i]=new ArrayList<>();for(int[]e:c){g[e[0]].add(new int[]{e[1],1});g[e[1]].add(new int[]{e[0],0});}return dfs(0,-1,g);}int dfs(int u,int p,List<int[]>[]g){int z=0;for(int[]e:g[u])if(e[0]!=p)z+=e[1]+dfs(e[0],u,g);return z;}}
