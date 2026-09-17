@@ -1,0 +1,1 @@
+var serialize=function(r){if(!r)return'#';return r.val+','+serialize(r.left)+','+serialize(r.right);};var deserialize=function(s){let a=s.split(','),i=0;function f(){let x=a[i++];if(x=='#')return null;let n=new TreeNode(+x);n.left=f();n.right=f();return n;}return f();};

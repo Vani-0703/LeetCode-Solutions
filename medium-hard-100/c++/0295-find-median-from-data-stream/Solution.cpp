@@ -1,0 +1,1 @@
+class MedianFinder{priority_queue<int>l;priority_queue<int,vector<int>,greater<int>>r;public:void addNum(int x){l.push(x);r.push(l.top());l.pop();if(r.size()>l.size()){l.push(r.top());r.pop();}}double findMedian(){return l.size()>r.size()?l.top():(l.top()+r.top())/2.0;}};

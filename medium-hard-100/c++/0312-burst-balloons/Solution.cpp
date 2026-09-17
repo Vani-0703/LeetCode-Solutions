@@ -1,0 +1,1 @@
+class Solution{public:int maxCoins(vector<int>&v){vector<int>a{1};for(int x:v)if(x)a.push_back(x);a.push_back(1);int n=a.size();vector<vector<int>>d(n,vector<int>(n));for(int len=2;len<n;len++)for(int l=0;l+len<n;l++){int r=l+len;for(int k=l+1;k<r;k++)d[l][r]=max(d[l][r],d[l][k]+d[k][r]+a[l]*a[k]*a[r]);}return d[0][n-1];}};

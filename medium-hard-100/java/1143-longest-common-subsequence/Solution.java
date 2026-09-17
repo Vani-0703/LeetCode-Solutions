@@ -1,1 +1,1 @@
-class Solution { public int longestCommonSubsequence(String a,String b){int[]d=new int[b.length()+1];for(char x:a.toCharArray()){int p=0;for(int j=1;j<=b.length();j++){int t=d[j];d[j]=x==b.charAt(j-1)?p+1:Math.max(d[j],d[j-1]);p=t;}}return d[b.length()];}}
+class Solution { public int longestCommonSubsequence(String a,String b){int[]d=new int[b.length()+1];for(char x:a.toCharArray()){int p=0;for(int j=1;j<=b.length();j++){int t=d[j];d[j]=x==b.charAt(j-1)?p+1:Math.max(d[j],d[j-1]);p=t;}}return d[b.length()];} }

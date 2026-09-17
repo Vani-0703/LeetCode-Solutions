@@ -1,0 +1,1 @@
+class Solution{public:vector<string>findItinerary(vector<vector<string>>&t){map<string,multiset<string>>g;for(auto&e:t)g[e[0]].insert(e[1]);vector<string>r;function<void(string)>f=[&](string u){while(!g[u].empty()){string v=*g[u].begin();g[u].erase(g[u].begin());f(v);}r.push_back(u);};f("JFK");reverse(r.begin(),r.end());return r;}};
