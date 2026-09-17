@@ -1,53 +1,67 @@
-# LeetCode Solutions
+# LeetCode Solutions — 100 Medium/Hard Problems
 
-A recruiter-friendly collection of **100 LeetCode problems**, with every problem separated into its own numbered folder.
+A recruiter-friendly DSA portfolio containing **100 medium and hard LeetCode problems**, divided evenly across four LeetCode-supported languages.
 
-## Languages
+## Language split
 
-- **Java — primary language** for DSA and placement preparation
-- C++ solutions retained where already available
-- Python can be added for selected problems when an alternative implementation is useful
+| Language | Problems |
+|---|---:|
+| **Java** | 25 |
+| **Python** | 25 |
+| **C++** | 25 |
+| **JavaScript** | 25 |
+| **Total** | **100** |
 
-## Structure
+**Java is the primary language** for this portfolio and placement preparation.
 
-Every problem stays separate and readable:
+> CSS is not a LeetCode programming language, so JavaScript is used as the fourth language. LeetCode currently supports Java, Python3, C++, JavaScript and many other languages. citeturn0search0
+
+## New problem set
+
+The new set is stored under:
 
 ```text
-0001-two-sum/
-  0001-two-sum.cpp
-  Solution.java
-0002-add-two-numbers/
-  0002-add-two-numbers.cpp
-  Solution.java
-...
-0100-same-tree/
-  0100-same-tree.cpp
-  Solution.java
+medium-hard-100/
+├── java/
+├── python/
+├── c++/
+└── javascript/
 ```
 
-This lets a recruiter or interviewer open one folder and immediately see the solution for that specific problem instead of searching through one large combined file.
+Every problem is separated into its own folder:
 
-## Java-first DSA practice
+```text
+medium-hard-100/
+└── java/
+    └── 0049-group-anagrams/
+        └── Solution.java
+```
 
-The Java implementations currently added for Problems **1–17** include:
+So recruiters can open **one problem → one folder → one solution** without searching through a large combined file.
 
-- Median of Two Sorted Arrays — binary search
-- Regular Expression Matching — dynamic programming
-- 3Sum / 4Sum — sorting + two pointers
-- Letter Combinations of a Phone Number — backtracking
-- Merge K Sorted Lists — priority queue
-- Reverse Nodes in k-Group — linked-list manipulation
+## Difficulty focus
 
-The same one-problem/one-folder format will be used for the remaining problems.
+The new collection intentionally focuses on **medium-sized and larger algorithmic problems**, including:
 
-## Topics
+- Dynamic Programming
+- Graphs and shortest paths
+- Backtracking
+- Binary trees
+- Linked lists
+- Sliding window
+- Greedy algorithms
+- Binary search
+- Heaps / priority queues
+- Hashing
+- Recursion
+- Tries
+- Union-style graph problems
+- Advanced array and string problems
 
-Arrays • Strings • Hashing • Two Pointers • Sliding Window • Binary Search • Stack • Linked List • Backtracking • Greedy • Dynamic Programming • Trees
+## Why four languages?
 
-## Goal
+The same repository demonstrates that the underlying DSA patterns can be implemented in multiple programming languages while keeping **Java as the main language**. LeetCode provides separate language environments and code templates for supported languages. citeturn0search0turn0search3
 
-Build a clean DSA portfolio that demonstrates problem-solving patterns in **Java**, with C++ and Python used where appropriate.
+## Important
 
-**Primary language:** Java  
-**Additional language:** C++  
-**Planned additional language:** Python
+These are LeetCode-style solutions intended for DSA practice and portfolio demonstration. Before discussing a solution in an interview, understand the algorithm, complexity, and why the implementation works.
