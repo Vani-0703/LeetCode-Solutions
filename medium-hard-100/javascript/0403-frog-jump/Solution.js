@@ -1,1 +1,0 @@
-var canCross=function(a){let m=new Map(a.map(x=>[x,new Set()]));m.get(0).add(0);for(let x of a)for(let k of m.get(x))for(let z of [k-1,k,k+1])if(z>0&&m.has(x+z))m.get(x+z).add(z);return m.get(a.at(-1)).size>0;};

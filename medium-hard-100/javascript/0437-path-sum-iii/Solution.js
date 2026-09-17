@@ -1,1 +1,0 @@
-var pathSum=function(root,t){let m=new Map([[0,1]]),ans=0;function f(n,s){if(!n)return;s+=n.val;ans+=m.get(s-t)||0;m.set(s,(m.get(s)||0)+1);f(n.left,s);f(n.right,s);m.set(s,m.get(s)-1);}f(root,0);return ans;};

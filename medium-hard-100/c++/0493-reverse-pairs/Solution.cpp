@@ -1,1 +1,0 @@
-class Solution{long long f(vector<int>&a,int l,int r){if(r-l<2)return 0;int m=(l+r)/2;long long z=f(a,l,m)+f(a,m,r);for(int i=l,j=m;i<m;i++){while(j<r&&(long long)a[i]>2LL*a[j])j++;z+=j-m;}inplace_merge(a.begin()+l,a.begin()+m,a.begin()+r);return z;}public:int reversePairs(vector<int>&a){return f(a,0,a.size());}};

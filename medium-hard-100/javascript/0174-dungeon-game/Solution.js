@@ -1,1 +1,0 @@
-var calculateMinimumHP=function(d){let R=d.length,C=d[0].length,a=Array(C+1).fill(Infinity);a[C-1]=1;for(let i=R-1;i>=0;i--)for(let j=C-1;j>=0;j--)a[j]=Math.max(1,Math.min(a[j],a[j+1])-d[i][j]);return a[0];};

@@ -1,2 +1,0 @@
-import java.util.*;
-class Solution { public int orangesRotting(int[][]g){int n=g.length,m=g[0].length,f=0,t=0;Queue<int[]>q=new ArrayDeque<>();for(int i=0;i<n;i++)for(int j=0;j<m;j++){if(g[i][j]==1)f++;else if(g[i][j]==2)q.add(new int[]{i,j});}int[][]d={{1,0},{-1,0},{0,1},{0,-1}};while(!q.isEmpty()&&f>0){for(int z=q.size();z>0;z--){int[]u=q.poll();for(int[]v:d){int x=u[0]+v[0],y=u[1]+v[1];if(x>=0&&y>=0&&x<n&&y<m&&g[x][y]==1){g[x][y]=2;f--;q.add(new int[]{x,y});}}}t++;}return f==0?t:-1;} }

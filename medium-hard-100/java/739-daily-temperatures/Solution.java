@@ -1,1 +1,0 @@
-class Solution { public int[] dailyTemperatures(int[]a){int[]r=new int[a.length],s=new int[a.length];int t=-1;for(int i=0;i<a.length;i++){while(t>=0&&a[i]>a[s[t]]){int j=s[t--];r[j]=i-j;}s[++t]=i;}return r;} }

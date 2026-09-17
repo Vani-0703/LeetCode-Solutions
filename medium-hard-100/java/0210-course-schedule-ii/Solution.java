@@ -1,2 +1,0 @@
-import java.util.*;
-class Solution { public int[] findOrder(int n,int[][]p){List<Integer>[]g=new List[n];int[]d=new int[n];for(int i=0;i<n;i++)g[i]=new ArrayList<>();for(int[]e:p){g[e[1]].add(e[0]);d[e[0]]++;}Queue<Integer>q=new ArrayDeque<>();for(int i=0;i<n;i++)if(d[i]==0)q.add(i);int[]a=new int[n];int k=0;while(!q.isEmpty()){int u=q.poll();a[k++]=u;for(int v:g[u])if(--d[v]==0)q.add(v);}return k==n?a:new int[0];} }

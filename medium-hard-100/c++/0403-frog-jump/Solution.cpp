@@ -1,1 +1,0 @@
-class Solution{public:bool canCross(vector<int>&a){unordered_map<int,unordered_set<int>>m;for(int x:a)m[x]={};m[0].insert(0);for(int x:a)for(int k:m[x])for(int d:{k-1,k,k+1})if(d>0&&m.count(x+d))m[x+d].insert(d);return !m[a.back()].empty();}};

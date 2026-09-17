@@ -1,1 +1,0 @@
-var canPartitionKSubsets=function(a,k){let s=a.reduce((x,y)=>x+y,0);if(s%k)return false;let t=s/k;a.sort((x,y)=>y-x);let b=Array(k).fill(0);function f(i){if(i==a.length)return true;for(let j=0;j<k;j++){if(b[j]+a[i]>t||(j&&b[j]==b[j-1]))continue;b[j]+=a[i];if(f(i+1))return true;b[j]-=a[i];}return false;}return f(0);};

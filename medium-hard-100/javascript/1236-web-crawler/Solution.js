@@ -1,1 +1,0 @@
-var crawl=function(start,htmlParser){let host=new URL(start).hostname,v=new Set([start]),q=[start];for(let i=0;i<q.length;i++)for(let u of htmlParser.getUrls(q[i]))if(new URL(u).hostname==host&&!v.has(u))v.add(u),q.push(u);return q;};

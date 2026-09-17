@@ -1,1 +1,0 @@
-class Solution{public:ListNode* mergeKLists(vector<ListNode*>&a){auto cmp=[](ListNode*x,ListNode*y){return x->val>y->val;};priority_queue<ListNode*,vector<ListNode*>,decltype(cmp)>q(cmp);for(auto x:a)if(x)q.push(x);ListNode d(0),*p=&d;while(!q.empty()){auto x=q.top();q.pop();p->next=x;p=x;if(x->next)q.push(x->next);}return d.next;}};

@@ -1,1 +1,0 @@
-class Solution { public String minRemoveToMakeValid(String s){StringBuilder b=new StringBuilder();int bal=0;for(char c:s.toCharArray()){if(c=='(')bal++;else if(c==')'){if(bal==0)continue;bal--;}b.append(c);}StringBuilder r=new StringBuilder();for(int i=b.length()-1;i>=0;i--){char c=b.charAt(i);if(c=='('&&bal-->0)continue;r.append(c);}return r.reverse().toString();} }

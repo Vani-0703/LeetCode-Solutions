@@ -1,1 +1,0 @@
-class Solution{public:long long splitArray(vector<int>&a,int k){long long l=0,r=0;for(int x:a)l=max(l,(long long)x),r+=x;while(l<r){long long m=(l+r)/2;int c=1;long long s=0;for(int x:a){if(s+x>m)c++,s=0;s+=x;}if(c<=k)r=m;else l=m+1;}return l;}};
