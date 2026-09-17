@@ -1,0 +1,2 @@
+import java.util.*;
+class Solution { public int findTargetSumWays(int[]a,int t){Map<Integer,Integer>m=new HashMap<>();m.put(0,1);for(int x:a){Map<Integer,Integer>n=new HashMap<>();for(var e:m.entrySet()){n.merge(e.getKey()+x,e.getValue(),Integer::sum);n.merge(e.getKey()-x,e.getValue(),Integer::sum);}m=n;}return m.getOrDefault(t,0);} }
