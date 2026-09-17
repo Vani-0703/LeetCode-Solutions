@@ -1,0 +1,2 @@
+import java.util.*;
+class Solution { public int minDifficulty(int[]a,int d){int n=a.length;if(n<d)return -1;int I=1<<29;int[]dp=new int[n+1];Arrays.fill(dp,I);dp[0]=0;for(int day=1;day<=d;day++){int[]nd=new int[n+1];Arrays.fill(nd,I);for(int i=day;i<=n;i++){int mx=0;for(int j=i-1;j>=day-1;j--){mx=Math.max(mx,a[j]);nd[i]=Math.min(nd[i],dp[j]+mx);}}dp=nd;}return dp[n];}}
