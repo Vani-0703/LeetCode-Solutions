@@ -1,6 +1,6 @@
 # LeetCode Solutions — 100 Medium/Hard Problems
 
-A recruiter-friendly DSA portfolio containing **100 real LeetCode problems**, divided evenly across four LeetCode-supported languages.
+A recruiter-friendly DSA portfolio containing **100 real LeetCode problem implementations**, divided evenly across four LeetCode-supported languages.
 
 ## Recruiter view
 
@@ -8,7 +8,7 @@ A recruiter-friendly DSA portfolio containing **100 real LeetCode problems**, di
 - **GitHub solutions:** https://github.com/Vani-0703/LeetCode-Solutions
 - **Problem index:** [`PROBLEM_INDEX.md`](PROBLEM_INDEX.md)
 
-> **Important:** The GitHub repository contains 100 solution implementations. LeetCode's **Solved** counter increases only after solutions are submitted to LeetCode and accepted by its judge; adding code to GitHub does not automatically change that counter.
+> **Important:** This repository contains 100 prepared solution implementations. LeetCode's **Solved** counter increases only when the code is submitted through the LeetCode account and accepted by LeetCode's judge. GitHub uploads do not automatically increase the LeetCode counter.
 
 ## Language split
 
@@ -30,22 +30,35 @@ The collection is stored under:
 
 ```text
 medium-hard-100/
-├── java/
-├── python/
-├── c++/
-└── javascript/
+├── java/        # 01–25
+├── python/      # 26–50
+├── c++/         # 51–75
+└── javascript/  # 76–100
 ```
 
-Every problem is separated into its own folder and numbered with its official LeetCode problem number:
+Every problem is separated into its own folder. The folder name contains **both the portfolio sequence number and the official LeetCode problem number**:
 
 ```text
 medium-hard-100/
 └── java/
-    └── 0049-group-anagrams/
+    └── 01-0049-group-anagrams/
         └── Solution.java
 ```
 
-This makes it easy for recruiters to open **one problem → one folder → one solution**.
+- `01` = portfolio sequence number
+- `0049` = official LeetCode problem number
+- `group-anagrams` = problem slug
+
+This makes it easy for a recruiter to open **one problem → one folder → one solution**.
+
+## 100-problem sequence
+
+- **01–25:** Java
+- **26–50:** Python
+- **51–75:** C++
+- **76–100:** JavaScript
+
+The numbering is part of the actual folder names, not only a separate index file.
 
 ## Difficulty and topics
 
@@ -66,9 +79,29 @@ The collection focuses on medium/hard interview-style DSA problems covering:
 - Union-Find / graph connectivity
 - Advanced array and string problems
 
-## Why four languages?
+## Legitimate LeetCode workflow
 
-The repository demonstrates that common DSA patterns can be implemented in multiple programming languages while keeping **Java as the main language**.
+For each problem:
+
+```text
+Open numbered GitHub folder
+        ↓
+Open the matching LeetCode problem
+        ↓
+Choose the same language
+        ↓
+Paste/use the Solution file
+        ↓
+Run test cases
+        ↓
+Submit on your own LeetCode account
+        ↓
+Accepted
+        ↓
+LeetCode records the accepted submission and updates your progress
+```
+
+The repository is prepared for this workflow; the LeetCode profile itself must be earned through genuine submissions on the user's account.
 
 ## Note for interviews
 
