@@ -1,0 +1,1 @@
+class Solution { public boolean canPartition(int[]a){int s=0;for(int x:a)s+=x;if((s&1)==1)return false;boolean[]d=new boolean[s/2+1];d[0]=true;for(int x:a)for(int j=s/2;j>=x;j--)d[j]|=d[j-x];return d[s/2];} }

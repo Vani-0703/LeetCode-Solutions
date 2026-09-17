@@ -1,0 +1,1 @@
+var longestPalindromeSubseq=function(s){let d=Array(s.length).fill(0);for(let i=s.length-1;i>=0;i--){let p=0;for(let j=i;j<s.length;j++){let t=d[j];d[j]=i==j?1:s[i]==s[j]?p+2:Math.max(d[j],d[j-1]);p=t;}}return d.at(-1);};

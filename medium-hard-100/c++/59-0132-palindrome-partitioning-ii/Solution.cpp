@@ -1,0 +1,1 @@
+class Solution{public:int minCut(string s){int n=s.size();vector<int>d(n+1);iota(d.begin(),d.end(),-1);for(int c=0;c<n;c++)for(int l=c,r=c;l>=0&&r<n&&s[l]==s[r];l--,r++)d[r+1]=min(d[r+1],d[l]+1);for(int c=0;c+1<n;c++)for(int l=c,r=c+1;l>=0&&r<n&&s[l]==s[r];l--,r++)d[r+1]=min(d[r+1],d[l]+1);return d[n];}};

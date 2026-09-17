@@ -1,0 +1,1 @@
+var solveNQueens=function(n){let a=Array(n).fill(0),res=[];function f(r,cols,d1,d2){if(r==n){res.push(a.map(x=>'.'.repeat(x)+'Q'+'.'.repeat(n-x-1)));return;}for(let c=0;c<n;c++)if(!cols.has(c)&&!d1.has(r-c)&&!d2.has(r+c)){a[r]=c;cols.add(c);d1.add(r-c);d2.add(r+c);f(r+1,cols,d1,d2);cols.delete(c);d1.delete(r-c);d2.delete(r+c);}}f(0,new Set(),new Set(),new Set());return res;};

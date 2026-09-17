@@ -1,0 +1,1 @@
+class Solution{public:int maximalRectangle(vector<vector<char>>&m){if(m.empty())return 0;int n=m[0].size(),ans=0;vector<int>h(n+1);for(auto&r:m){for(int j=0;j<n;j++)h[j]=r[j]=='1'?h[j]+1:0;vector<int>s;for(int i=0;i<=n;i++){while(!s.empty()&&h[s.back()]>h[i]){int x=s.back();s.pop_back();int l=s.empty()?0:s.back()+1;ans=max(ans,h[x]*(i-l));}s.push_back(i);}}return ans;}};

@@ -1,0 +1,1 @@
+var longestCommonSubsequence=function(a,b){let d=Array(b.length+1).fill(0);for(let x of a){let p=0;for(let j=1;j<=b.length;j++){let t=d[j];d[j]=x==b[j-1]?p+1:Math.max(d[j],d[j-1]);p=t;}}return d.at(-1);};

@@ -1,0 +1,2 @@
+import java.util.*;
+class RandomizedSet { List<Integer>a=new ArrayList<>();Map<Integer,Integer>m=new HashMap<>();Random r=new Random(); public boolean insert(int v){if(m.containsKey(v))return false;m.put(v,a.size());a.add(v);return true;} public boolean remove(int v){Integer i=m.get(v);if(i==null)return false;int x=a.get(a.size()-1);a.set(i,x);m.put(x,i);a.remove(a.size()-1);m.remove(v);return true;} public int getRandom(){return a.get(r.nextInt(a.size()));} }
