@@ -1,0 +1,1 @@
+class Solution { public int numEnclaves(int[][]g){for(int i=0;i<g.length;i++){dfs(g,i,0);dfs(g,i,g[0].length-1);}for(int j=0;j<g[0].length;j++){dfs(g,0,j);dfs(g,g.length-1,j);}int c=0;for(int[]r:g)for(int x:r)c+=x;return c;}void dfs(int[][]g,int i,int j){if(i<0||j<0||i==g.length||j==g[0].length||g[i][j]==0)return;g[i][j]=0;dfs(g,i+1,j);dfs(g,i-1,j);dfs(g,i,j+1);dfs(g,i,j-1);}}
